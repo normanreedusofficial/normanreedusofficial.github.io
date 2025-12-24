@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Norman - Norman Reedus Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; padding: 0; 
+            background: #000; 
+            color: #fff; 
+            line-height: 1.6;
+        }
+        header { background: #111; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; margin: 0; }
+        header h1 i { color: #c62828; margin-right: 10px; }
+        nav { background: #222; padding: 15px; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a, nav button { color: white; margin: 10px 20px; text-decoration: none; font-size: 1.1em; background: none; border: none; cursor: pointer; transition: color 0.3s; }
+        nav a:hover, nav button:hover { color: #c62828; }
+        .hero { 
+            background: url('https://deadline.com/wp-content/uploads/2024/04/norman-reedus-feb-4-2024-getty.jpeg?w=681&h=383&crop=1') center/cover no-repeat; 
+            height: 70vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            position: relative;
+        }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; padding: 20px; }
+        .hero h2 { font-size: 3.5em; margin: 0; }
+        .hero p { font-size: 1.4em; }
+        section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin: 60px 0; }
+        .bio-text { font-size: 1.1em; }
+        .bio-text h3 { color: #c62828; font-size: 1.8em; margin-top: 40px; }
+        .bio-img { border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
+        .bio-img img { width: 100%; height: auto; transition: transform 0.5s; }
+        .bio-img img:hover { transform: scale(1.05); }
+        .timeline { margin: 60px 0; }
+        .timeline-item { margin: 40px 0; padding-left: 40px; border-left: 3px solid #c62828; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: #c62828; border-radius: 50%; }
+        .timeline-item h4 { margin: 0; font-size: 1.4em; }
+        .timeline-item span { color: #aaa; font-size: 0.9em; }
+        footer { background: #111; padding: 40px; text-align: center; font-size: 0.9em; }
+        @media (max-width: 868px) {
+            .bio-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2.5em; }
+            .hero { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-star"></i> Norman Reedus Fan Site</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+        <a href="about.html"><i class="fas fa-user"></i> About Norman</a>
+        <span id="userGreeting"></span>
+        <button id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <a href="login.html" id="loginLink"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="register.html" id="registerLink"><i class="fas fa-user-plus"></i> Register</a>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Norman Reedus</h2>
+            <p>Actor • Model • Photographer • Icon</p>
+        </div>
+    </div>
+    
+    <section>
+        <div class="bio-grid">
+            <div class="bio-text">
+                <h3>Early Life</h3>
+                <p>Born Norman Mark Reedus on January 6, 1969, in Hollywood, Florida. Of Italian, English, Scottish, and Irish descent, Norman grew up with his mother Marianne (a teacher) and sister Leslie after his parents divorced. He spent time living abroad, including Japan, and briefly attended college before pursuing art and motorcycles in Los Angeles.</p>
+                
+                <h3>Breakthrough & Career</h3>
+                <p>Starting as a model (Prada, etc.) and artist, Norman broke into acting with films like Mimic (1997) and The Boondock Saints (1999). His iconic role as Daryl Dixon in The Walking Dead (2010–2022) made him a global star. He reprised Daryl in the spin-off The Walking Dead: Daryl Dixon (2023–present), with Season 3 wrapping in late 2025 as the character's finale.</p>
+                <p>Other highlights: Death Stranding games (2019 & 2025 sequel), Ride with Norman Reedus TV series, and films like The Bikeriders and Ballerina (2025).</p>
+            </div>
+            <div class="bio-img">
+                <img src="https://www.realitytea.com/wp-content/uploads/sites/6/2025/08/Norman-Reedus.jpg" alt="Norman Reedus Recent Portrait">
+            </div>
+        </div>
+
+        <h3 style="text-align:center; font-size:2em;">Career Timeline</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>1997</h4>
+                <span>Film debut in Mimic</span>
+            </div>
+            <div class="timeline-item">
+                <h4>1999</h4>
+                <span>Breakout role in The Boondock Saints</span>
+            </div>
+            <div class="timeline-item">
+                <h4>2010–2022</h4>
+                <span>Daryl Dixon in The Walking Dead</span>
+            </div>
+            <div class="timeline-item">
+                <h4>2016–present</h4>
+                <span>Ride with Norman Reedus TV series</span>
+            </div>
+            <div class="timeline-item">
+                <h4>2019 & 2025</h4>
+                <span>Death Stranding video games</span>
+            </div>
+            <div class="timeline-item">
+                <h4>2023–2025</h4>
+                <span>The Walking Dead: Daryl Dixon spin-off</span>
+            </div>
+        </div>
+
+        <div class="bio-grid">
+            <div class="bio-img">
+                <img src="https://people.com/thmb/rIKg3MrvC2oIJaDaOtnVUn2ZQPQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1022x495:1024x497)/diane-kruger-norman-reedus-1-15e93c5cb03f45beb832a5f4847bc322.jpg" alt="Norman with Diane Kruger">
+            </div>
+            <div class="bio-text">
+                <h3>Personal Life</h3>
+                <p>Norman has been engaged to actress Diane Kruger since 2021. They share a daughter, Nova Tennessee (born 2018). He also has a son, Mingus Lucien Reedus (born 1999), with ex-partner Helena Christensen.</p>
+                <p>A passionate motorcyclist and artist, Norman lives in New York and continues global travels for work and inspiration.</p>
+            </div>
+        </div>
+
+        <div class="bio-grid">
+            <div class="bio-text">
+                <h3>Photography & Art</h3>
+                <p>Beyond acting, Norman is an accomplished photographer with multiple books and exhibitions worldwide. His Big Bald Gallery showcases his work and collaborations.</p>
+            </div>
+            <div class="bio-img">
+                <img src="https://offloadmedia.feverup.com/secretnyc.co/wp-content/uploads/2025/03/26155418/Norman-Reedus-Soho-Gallery-5-1024x767.jpg" alt="Norman Reedus Photography Exhibition">
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Norman Reedus Fan Site – Made with Acode ❤️</p>
+        <p>Contact for orders: <a href="https://t.me/normanreedusofficial_management" style="color:#c62828;">@normanreedusofficial_management</a></p>
+    </footer>
+
+    <script>
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+            document.getElementById('userGreeting').textContent = `Hello, ${currentUser}!`;
+            document.getElementById('logoutBtn').style.display = 'inline';
+            document.getElementById('loginLink').style.display = 'none';
+            document.getElementById('registerLink').style.display = 'none';
+        }
+        document.getElementById('logoutBtn')?.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            location.reload();
+        });
+    </script>
+</body>
+</html>
