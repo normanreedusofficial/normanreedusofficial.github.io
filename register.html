@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Norman Reedus Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000 url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-container {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+        .register-container h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #c62828;
+        }
+        .register-container h2 i {
+            margin-right: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 8px;
+            background: #222;
+            color: #fff;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #c62828;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #c62828;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #b71c1c;
+            transform: scale(1.03);
+        }
+        .links {
+            margin-top: 25px;
+        }
+        .links a {
+            color: #ff7961;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .back-home {
+            display: block;
+            margin-top: 30px;
+            color: #fff;
+            font-size: 1em;
+        }
+        @media (max-width: 480px) {
+            .register-container {
+                padding: 30px;
+            }
+            .register-container h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2><i class="fas fa-user-plus"></i> Register</h2>
+        <form id="registerForm">
+            <input type="text" id="username" placeholder="Choose Username" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Create Password" required>
+            <button type="submit" class="btn"><i class="fas fa-check"></i> Create Account</button>
+        </form>
+        <div class="links">
+            <a href="login.html">Already have an account? Login here</a>
+        </div>
+        <a href="index.html" class="back-home"><i class="fas fa-home"></i> ← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (username === '' || email === '' || password === '') {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            if (localStorage.getItem('user_' + username)) {
+                alert('Username already taken! Please choose another.');
+                return;
+            }
+
+            const userData = { email, password };
+            localStorage.setItem('user_' + username, JSON.stringify(userData));
+            alert('Registration successful! Welcome, ' + username + '!\nYou can now log in.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

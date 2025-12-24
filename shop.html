@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Norman Reedus Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; padding: 0; 
+            background: #000; 
+            color: #fff; 
+            line-height: 1.6;
+        }
+        header { background: #111; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; margin: 0; }
+        header h1 i { color: #c62828; margin-right: 10px; }
+        nav { background: #222; padding: 15px; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a, nav button { color: white; margin: 10px 20px; text-decoration: none; font-size: 1.1em; background: none; border: none; cursor: pointer; transition: color 0.3s; }
+        nav a:hover, nav button:hover { color: #c62828; }
+        section { padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.8em; margin: 40px 0; }
+        .intro { text-align: center; font-size: 1.4em; max-width: 900px; margin: 0 auto 60px; }
+        .vip-section { background: linear-gradient(to bottom, #111, #000); padding: 80px 20px; border-radius: 30px; margin-bottom: 80px; box-shadow: 0 0 50px rgba(255,215,0,0.2); }
+        .vip-card-display { max-width: 800px; margin: 0 auto 60px; text-align: center; }
+        .vip-card-display img { max-width: 100%; border-radius: 25px; box-shadow: 0 0 60px gold; transition: transform 0.5s; }
+        .vip-card-display img:hover { transform: scale(1.05); }
+        .vip-price { font-size: 3em; color: gold; margin: 30px 0; font-weight: bold; }
+        .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .benefit-item { background: #111; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+        .benefit-item i { font-size: 3em; color: gold; margin-bottom: 20px; }
+        .benefit-item h3 { font-size: 1.6em; margin: 15px 0; }
+        .inquire-btn { display: block; width: 300px; margin: 60px auto 0; padding: 20px; background: #c62828; color: white; text-align: center; font-size: 1.5em; font-weight: bold; border-radius: 50px; text-decoration: none; transition: all 0.4s; box-shadow: 0 10px 30px rgba(198,40,40,0.5); }
+        .inquire-btn:hover { background: #b71c1c; transform: translateY(-5px); }
+        .merch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .merch-item { background: #111; padding: 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.6); transition: transform 0.4s; }
+        .merch-item:hover { transform: translateY(-10px); }
+        .merch-item img { width: 100%; border-radius: 15px; margin-bottom: 20px; }
+        .merch-btn { padding: 15px 30px; background: #c62828; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; margin-top: 20px; transition: all 0.3s; }
+        .merch-btn:hover { background: #b71c1c; }
+        footer { background: #111; padding: 40px; text-align: center; font-size: 0.9em; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            nav { flex-direction: column; }
+            .vip-price { font-size: 2.5em; }
+            .inquire-btn { width: 90%; font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-star"></i> Norman Reedus Fan Site</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <a href="videos.html"><i class="fas fa-video"></i> Videos</a>
+        <a href="shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+        <span id="userGreeting"></span>
+        <button id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <a href="login.html" id="loginLink"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="register.html" id="registerLink"><i class="fas fa-user-plus"></i> Register</a>
+    </nav>
+    
+    <section>
+        <h2>Exclusive Shop</h2>
+        <p class="intro">Get premium, limited-edition items and join the ultimate Norman Reedus fan experience!</p>
+
+        <div class="vip-section">
+            <h2 style="color:gold; text-shadow: 0 0 20px gold;">VIP Gold Membership Card</h2>
+            <div class="vip-card-display">
+                <img src="https://www.rockdesign.com/cache/upload/template/k/d/1800-1200/crop/mattegoldmetal_dominic02.jpg" alt="VIP Gold Membership Card">
+            </div>
+            <p class="vip-price">$300 – Limited Edition</p>
+
+            <div class="benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-crown"></i>
+                    <h3>Lifetime VIP Status</h3>
+                    <p>Forever recognized as an elite member of the Norman Reedus fan community</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Direct Access to Norman</h3>
+                    <p>Exclusive channel for messages and occasional personal responses from Norman Reedus</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-ticket-alt"></i>
+                    <h3>Priority Event Access</h3>
+                    <p>Early access and reserved spots for virtual/in-person events</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Meet & Greet Opportunities</h3>
+                    <p>Chance to join exclusive meet-and-greets and fan experiences</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-gift"></i>
+                    <h3>Exclusive Perks</h3>
+                    <p>Special surprises, signed items, and behind-the-scenes content</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-star"></i>
+                    <h3>Legacy Recognition</h3>
+                    <p>Your name featured on the official fan honor wall</p>
+                </div>
+            </div>
+
+            <a href="javascript:inquireMembership()" class="inquire-btn">
+                <i class="fab fa-telegram-plane"></i> Inquire Now via Telegram
+            </a>
+        </div>
+
+        <h2>Official Merchandise</h2>
+        <p class="intro">Limited-edition items from Norman's projects and gallery</p>
+
+        <div class="merch-grid">
+            <div class="merch-item">
+                <img src="https://bigbaldgallery.com/cdn/shop/products/Tulum-Detail_1024x1024.jpg?v=1610049254" alt="Big Bald Gallery T-Shirt">
+                <h3>Big Bald Gallery T-Shirt</h3>
+                <p>Limited edition art print tee from Norman's gallery</p>
+                <button class="merch-btn" onclick="inquireMerch('Big Bald Gallery T-Shirt')">Inquire via Telegram</button>
+            </div>
+
+            <div class="merch-item">
+                <img src="https://m.media-amazon.com/images/I/61Cd2rJZgRL._AC_SL1500_.jpg" alt="Daryl Dixon T-Shirt">
+                <h3>Daryl Dixon Classic Tee</h3>
+                <p>Iconic "Bite Me" design</p>
+                <button class="merch-btn" onclick="inquireMerch('Daryl Dixon Classic Tee')">Inquire via Telegram</button>
+            </div>
+
+            <div class="merch-item">
+                <img src="https://bigbaldgallery.com/cdn/shop/products/portrait_book_mockup_4_1024x1024.jpg?v=1669913965" alt="Photography Book">
+                <h3>Signed Photography Book</h3>
+                <p>Portraits from the Woods – limited signed copies</p>
+                <button class="merch-btn" onclick="inquireMerch('Signed Photography Book')">Inquire via Telegram</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Norman Reedus Fan Site – Made with Acode ❤️</p>
+        <p>Contact for orders: <a href="https://t.me/normanreedusofficial_management" style="color:#c62828;">@normanreedusofficial_management</a></p>
+    </footer>
+
+    <script>
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+            document.getElementById('userGreeting').textContent = `Hello, ${currentUser}!`;
+            document.getElementById('logoutBtn').style.display = 'inline';
+            document.getElementById('loginLink').style.display = 'none';
+            document.getElementById('registerLink').style.display = 'none';
+        }
+        document.getElementById('logoutBtn')?.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            location.reload();
+        });
+
+        function inquireMembership() {
+            if (!currentUser) {
+                alert('Please log in to inquire about the VIP Membership!');
+                window.location.href = 'login.html';
+                return;
+            }
+            const message = `Hello! I'm ${currentUser} and I'm interested in the VIP Gold Membership Card ($300) with all exclusive benefits`;
+            window.open(`https://t.me/normanreedusofficial_management?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function inquireMerch(item) {
+            if (!currentUser) {
+                alert('Please log in to inquire about merchandise!');
+                window.location.href = 'login.html';
+                return;
+            }
+            const message = `Hello! I'm \( {currentUser} and I want to purchase the \){item}`;
+            window.open(`https://t.me/normanreedusofficial_management?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>

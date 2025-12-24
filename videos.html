@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Norman Reedus Fan Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; padding: 0; 
+            background: #000; 
+            color: #fff; 
+            line-height: 1.6;
+        }
+        header { background: #111; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; margin: 0; }
+        header h1 i { color: #c62828; margin-right: 10px; }
+        nav { background: #222; padding: 15px; text-align: center; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav a, nav button { color: white; margin: 10px 20px; text-decoration: none; font-size: 1.1em; background: none; border: none; cursor: pointer; transition: color 0.3s; }
+        nav a:hover, nav button:hover { color: #c62828; }
+        section { padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.5em; margin: 60px 0 40px; }
+        .intro { text-align: center; font-size: 1.3em; max-width: 900px; margin: 0 auto 60px; }
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; }
+        .video-item { background: #111; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.6); transition: transform 0.4s; }
+        .video-item:hover { transform: translateY(-10px); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 20px 20px 0 0; }
+        .video-info { padding: 20px; text-align: center; }
+        .video-info h3 { margin: 0 0 10px; font-size: 1.4em; }
+        footer { background: #111; padding: 40px; text-align: center; font-size: 0.9em; }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            nav { flex-direction: column; }
+            .video-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-star"></i> Norman Reedus Fan Site</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+        <a href="about.html"><i class="fas fa-user"></i> About</a>
+        <a href="community.html"><i class="fas fa-users"></i> Community</a>
+        <a href="videos.html"><i class="fas fa-video"></i> Videos</a>
+        <span id="userGreeting"></span>
+        <button id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        <a href="login.html" id="loginLink"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="register.html" id="registerLink"><i class="fas fa-user-plus"></i> Register</a>
+    </nav>
+    
+    <section>
+        <h2>Videos</h2>
+        <p class="intro">Watch the best trailers, interviews, and episodes featuring Norman Reedus – from Daryl Dixon to Ride with Norman Reedus and beyond!</p>
+
+        <h2>Daryl Dixon Trailers</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/LNMxvj0f7ys" title="Daryl Dixon Season 3 Trailer" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>The Walking Dead: Daryl Dixon Season 3 Official Trailer (2025)</h3>
+                    <p>Danger in Spain – Norman Reedus returns as Daryl!</p>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0thA8KRC4pU" title="Daryl Dixon Season 3 Teaser" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Season 3 Teaser – Survival Continues</h3>
+                    <p>First look at the epic new chapter.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Ride with Norman Reedus</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/BQRuSsehOFw" title="Ride Season 7 Trailer" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Ride with Norman Reedus Season 7 Official Trailer (2025)</h3>
+                    <p>New adventures on the open road!</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Interviews & Panels</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/w9KD5hv8Mfo" title="Comic-Con Panel 2025" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Comic-Con 2025 Panel with Norman Reedus & Cast</h3>
+                    <p>Behind-the-scenes stories from Daryl Dixon.</p>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/uzpOiKhWDgU" title="Boondock Saints 3 Confirmation" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Norman Confirms Boondock Saints 3</h3>
+                    <p>Exciting update on the cult classic sequel.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Other Projects</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Ghpwvoq7EhA" title="Ballerina Trailer" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Ballerina Final Trailer (2025) – Norman Reedus</h3>
+                    <p>John Wick spin-off action!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Norman Reedus Fan Site – Made with Acode ❤️</p>
+        <p>Contact for orders: <a href="https://t.me/normanreedusofficial_management" style="color:#c62828;">@normanreedusofficial_management</a></p>
+    </footer>
+
+    <script>
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+            document.getElementById('userGreeting').textContent = `Hello, ${currentUser}!`;
+            document.getElementById('logoutBtn').style.display = 'inline';
+            document.getElementById('loginLink').style.display = 'none';
+            document.getElementById('registerLink').style.display = 'none';
+        }
+        document.getElementById('logoutBtn')?.addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            location.reload();
+        });
+    </script>
+</body>
+</html>
